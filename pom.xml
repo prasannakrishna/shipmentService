@@ -69,6 +69,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- ── Observability (traces → Tempo, metrics → Prometheus, logs → Loki) ── -->
+		<dependency>
+			<groupId>com.bhagwat.scm</groupId>
+			<artifactId>api-observability</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

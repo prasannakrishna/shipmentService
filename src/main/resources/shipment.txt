@@ -1,0 +1,18 @@
+1.
+transport shipment -
+this is for carrier -> it can contain multiple consignment.
+this is for posting milestone
+
+classicShipment
+one order will be transformed to 1 shipment,
+now the scenario where community order
+ it can have multiple order header and multiple lines
+and customer order
+
+
+orders -
+community orders
+community cart for frequencies
+and each cart should be dynamically set products which are top mostly bought group of 7 products
+daily community cart can have multiple carts basically indicating top 7 products, next top 7 products like that
+
