@@ -23,12 +23,36 @@ public class Shipment {
     private String customerId;
 
     @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "addressLine1", column = @Column(name = "customer_address_line1")),
+        @AttributeOverride(name = "addressLine2", column = @Column(name = "customer_address_line2")),
+        @AttributeOverride(name = "city",         column = @Column(name = "customer_city")),
+        @AttributeOverride(name = "postCode",     column = @Column(name = "customer_post_code")),
+        @AttributeOverride(name = "state",        column = @Column(name = "customer_state")),
+        @AttributeOverride(name = "country",      column = @Column(name = "customer_country"))
+    })
     private Address customerAddress;
 
     @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "addressLine1", column = @Column(name = "source_address_line1")),
+        @AttributeOverride(name = "addressLine2", column = @Column(name = "source_address_line2")),
+        @AttributeOverride(name = "city",         column = @Column(name = "source_city")),
+        @AttributeOverride(name = "postCode",     column = @Column(name = "source_post_code")),
+        @AttributeOverride(name = "state",        column = @Column(name = "source_state")),
+        @AttributeOverride(name = "country",      column = @Column(name = "source_country"))
+    })
     private Address sourceAddress;
 
     @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "addressLine1", column = @Column(name = "target_address_line1")),
+        @AttributeOverride(name = "addressLine2", column = @Column(name = "target_address_line2")),
+        @AttributeOverride(name = "city",         column = @Column(name = "target_city")),
+        @AttributeOverride(name = "postCode",     column = @Column(name = "target_post_code")),
+        @AttributeOverride(name = "state",        column = @Column(name = "target_state")),
+        @AttributeOverride(name = "country",      column = @Column(name = "target_country"))
+    })
     private Address targetAddress;
 
     private Date deliveryByDate;
